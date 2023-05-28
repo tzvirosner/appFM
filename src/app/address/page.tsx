@@ -18,9 +18,7 @@ export default function Address() {
                 <label>zip code</label><br/><br/>
             </div>
             <div className="form-floating mb-3">
-                <input type="text" className="form-control" name="sf"
-                    // onKeyPress="<%=x.nc%>"
-                />
+                <input type="text" className="form-control" name="sf"/>
                 <label>SF</label><br/><br/>
             </div>
             <button type="submit" className="btn btn-primary">continue</button>

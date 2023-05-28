@@ -25,3 +25,46 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.call-to-action-nav {
+  position: relative;
+  z-index: 2;
+  font-size: 0.8em;
+  color: black;
+  padding: 0.3rem 0.5rem;
+  background: linear-gradient(270deg, rgb(171, 102, 255) 0%, rgb(20, 241, 149) 101.39%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.firstBtn {
+  background: linear-gradient(101.81deg, rgb(240, 135, 255) -4.52%, rgb(110, 31, 206) 54.5%, rgba(110, 31, 206, 0.2) 101.41%);
+  color: rgb(255, 255, 255);
+}
+
+.secondBtn {
+  /*font-family: DSemi, monospace;*/
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  font-size: 0.95rem;
+  width: fit-content;
+  background-color: black;
+  border-radius: 2.25rem;
+  padding: 0.875rem 1.5rem;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn {
+  /*font-family: DSemi, monospace;*/
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  font-size: 0.95rem;
+  width: fit-content;
+  /*background-color: rgb(20, 241, 149);*/
+  border-radius: 2.25rem;
+  padding: 0.875rem 1.5rem;
+}

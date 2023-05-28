@@ -4,17 +4,11 @@ import Link from "next/link";
 import React, { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image';
-
-function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
 function NavBar() {
   const [open, setOpen] = useState(false)
-
   return (
-      <div className="bg-white">
+      <div className="dark">
         <Transition.Root show={open} as={Fragment}>
           <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
             <Transition.Child
@@ -39,7 +33,7 @@ function NavBar() {
                   leaveFrom="translate-x-0"
                   leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+                <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto dark pb-12 shadow-xl">
                   <div className="flex px-4 pb-2 pt-5">
                     <button
                         type="button"
@@ -57,15 +51,15 @@ function NavBar() {
         </Transition.Root>
 
         <header className="relative bg-slate-950">
-          <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8 call-to-action-nav">
-            {`BREAKPOINT 2023 - NEW YORK CITY. - GET TICKETS ->`}
-          </p>
+          {/*<p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8 call-to-action-nav">*/}
+          {/*  {`BREAKPOINT 2023 - NEW YORK CITY. - GET TICKETS ->`}*/}
+          {/*</p>*/}
           <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
             <div className="border-b border-black">
               <div className="flex h-16 items-center">
                 <button
                     type="button"
-                    className="rounded-md bg-white p-2 text-gray-400 lg:hidden"
+                    className="rounded-md p-2 text-gray-400 lg:hidden"
                     onClick={() => setOpen(true)}
                 >
                   <span className="sr-only">Open menu</span>
@@ -81,15 +75,15 @@ function NavBar() {
                         alt=""
                     />
                   </a>
-                  <h3 className={"pl-5 mt-1"}>appFM</h3>
+                  <h3 className={"pl-5 mt-1 text-neutral-50"}>appFM</h3>
                 </div>
                 <div className="ml-auto flex items-center">
                   <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                    <a href="#" className="text-sm font-medium text-white-700 hover:text-gray-800">
+                    <a href="#" className="text-sm font-medium text-neutral-50 hover:text-gray-800">
                       Sign in
                     </a>
                     <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                    <a href="#" className="text-sm font-medium text-white-700 hover:text-gray-800">
+                    <a href="#" className="text-sm font-medium text-neutral-50 hover:text-gray-800">
                       Create account
                     </a>
                   </div>
@@ -108,6 +102,7 @@ export default function Home() {
         <div>
           <NavBar />
           <svg
+            style={{height: "80vh"}}
               viewBox="0 0 1024 1024"
               className="absolute left-1/2 top-1/6 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
               aria-hidden="true"
@@ -124,22 +119,26 @@ export default function Home() {
               </radialGradient>
             </defs>
           </svg>
-          <div className="mx-auto max-w-full text-center lg:mx-0 lg:flex-auto lg:py-48 lg:px-80 lg:text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl">
+          <div className="mx-auto max-w-full text-center lg:mx-0 lg:flex-auto lg:py-48 lg:px-80 lg:text-center ">
+            <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl"
+                style={{color: "white"}}
+            >
               Cloud Based Financial Modeling
             </h1>
           </div>
-          <div className="mx-auto max-w-2xl text-center lg:text-center">
-            <h3 className="text-2xl tracking-tight text-white-900 sm:text-2xl">
+          <div className="mx-auto max-w-2xl text-center lg:text-center dark">
+            <h3 className="text-2xl tracking-tight text-white-900 sm:text-2xl"
+                style={{color: "white"}}
+            >
               A cloud-based solution providing comprehensive and real-time financial analysis for real estate investments and transactions.
             </h3>
           </div>
-          <div className="mx-auto max-w-2xl text-center lg:text-center flex flex-row justify-evenly py-10">
+          <div className="mx-auto max-w-2xl text-center lg:text-center flex flex-row justify-evenly py-10 dark ">
             <div className="firstBtn btn">
               <Link
                   href="https://immense-ocean-60893.herokuapp.com"
                   className={"text-sm font-semibold leading-6 text-white mt-2"}
-                  // className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  // className="rounded-md dark px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
               </Link>
@@ -151,16 +150,16 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto max-w-2xl text-center lg:text-center">
-            <h3 className="text-2xl tracking-tight text-blue-900 sm:text-xl">
-              Powerful tools and integrations from companies all around the world.
-            </h3>
-            <div className={"py-5"}>
-              <Image src={"/temp_companies.png"}
-                     alt={"temp companies"}
-                     width={1000}
-                     height={1000}
-              />
-            </div>
+            {/*<h3 className="text-2xl tracking-tight text-blue-900 sm:text-xl">*/}
+            {/*  Powerful tools and integrations from companies all around the world.*/}
+            {/*</h3>*/}
+            {/*<div className={"py-5"}>*/}
+            {/*  <Image src={"/temp_companies.png"}*/}
+            {/*         alt={"temp companies"}*/}
+            {/*         width={1000}*/}
+            {/*         height={1000}*/}
+            {/*  />*/}
+            {/*</div>*/}
           </div>
         </div>
       </>

@@ -25,3 +25,45 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+.center{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border: 3px rgb(211, 217, 219) solid;
+  padding: 2% 2% 2% 2%;
+}
+.form-control{
+  width: 100%;
+  float: left;
+  border: 2px rgb(211, 217, 219) solid;
+}
+.btn-primary{
+  width: 100%;
+}
+.partial_width{
+  width: 33.33%;
+  float: left;
+  padding:.5%;
+}
+.full_width{
+  width:100%;
+  float: left;
+}
+table{
+  border: 3px rgb(211, 217, 219) solid;
+  padding: 2% 2% 2% 2%;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+}
+td,th{
+  border: 2px rgb(211, 217, 219) solid;
+  border-collapse: collapse;
+}
+th{
+  width:100%;
+  text-align:center;
+}

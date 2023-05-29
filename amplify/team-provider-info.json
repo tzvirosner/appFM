@@ -22,7 +22,13 @@
       "UnauthRoleName": "amplify-appfm-appfm-123029-unauthRole",
       "StackName": "amplify-appfm-appfm-123029",
       "StackId": "arn:aws:cloudformation:us-east-1:530063893595:stack/amplify-appfm-appfm-123029/1beb6b30-fd8e-11ed-8ac4-12cf8f3e4719",
-      "AmplifyAppId": "d1f1m2mqeo1zgd"
+      "AmplifyAppId": "d1f1m2mqeo1zgd",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-appfm-appfm-123029-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "appfm": {}
+      }
     }
   }
 }

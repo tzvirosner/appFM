@@ -1,0 +1,25 @@
+<%-include ("partials/header.ejs")%>
+	<form action="/address" method="post" class="center">
+		<div class="form-floating mb-3">
+			<input type="text" class="form-control" name="street_address">
+			<label>street address</label><br><br>
+		</div>
+		<div class="form-floating mb-3">
+			<input type="text" class="form-control" name="city">
+			<label>city</label><br><br>
+		</div>
+		<div class="form-floating mb-3">
+			<input type="text" class="form-control"  name="state">
+			<label>state</label><br><br>
+		</div>
+		<div class="form-floating mb-3">
+			<input type="text" class="form-control" name="zip">
+			<label>zip code</label><br><br>
+		</div>
+		<div class="form-floating mb-3">
+			<input type="text" class="form-control" name="sf" onkeypress="<%=x.nc%>">
+			<label>SF</label><br><br>
+		</div>
+		<button type="submit" class="btn btn-primary">continue</button>
+	</form>	
+<%-include ("partials/footer.ejs")%>

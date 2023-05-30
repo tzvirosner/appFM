@@ -1,0 +1,13 @@
+<%-include ("partials/header.ejs")%>
+<form method="post" action="/sale" class="center">
+	<div class="form-floating mb-3">
+		<input name="cap_rate" type="text" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>exit cap rate (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input name="closing_costs" type="text" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>closing costs (%)</label><br><br>
+	</div>
+	<button type="submit" class="btn btn-primary">continue</button>
+</form>
+<%-include ("partials/footer.ejs")%> 

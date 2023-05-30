@@ -1,0 +1,27 @@
+<%-include ("partials/header.ejs")%>
+<form action="/rental_income" method="post" class="center">
+	<%var i = 0%>
+	<%while(i<x.num_unit_types){%>
+		<div>
+			<div class="form-floating mb-3 partial_width">
+				<input type="text" class="form-control" name="type_<%=i%>" <%=x.requ%>>
+				<label>unit type</label>
+			</div>
+			<div class="form-floating mb-3 partial_width">
+				<input type="text" class="form-control" name="income_<%=i%>" <%=x.requ%> onkeypress="<%=x.nc%>">
+				<label>monthly rent (p/unit)</label>
+			</div>
+			<div class="form-floating mb-3 partial_width">
+				<input type="number" class="form-control" name="amount_<%=i%>" <%=x.requ%>>
+				<label># of units</label>
+			</div>
+		</div>
+        <%i++%>
+	<%}%>
+	<div class="form-floating mb-3 full_width">
+		<input type="text" name="inflation_rate" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>inflation (%)</label><br><br>
+	</div>
+	<div class="full_width"><button type="submit" class="btn btn-primary">continue</button></div>
+</form>	
+<%-include ("partials/footer.ejs")%>

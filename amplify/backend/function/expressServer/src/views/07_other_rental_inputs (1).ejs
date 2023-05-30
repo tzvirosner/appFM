@@ -1,0 +1,17 @@
+<%-include ("partials/header.ejs")%>
+<form action="/other_rental_inputs" method="post" class="center">
+	<div class="form-floating mb-3">
+		<input type="text"  name="vacancy" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>vacancy (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="text" name="bad_debt" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>bad debt (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="text" name="management_fee" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>management fee (%)</label><br><br>
+	</div>
+	<button type="submit" class="btn btn-primary">continue</button>
+</form>
+<%-include ("partials/footer.ejs")%> 

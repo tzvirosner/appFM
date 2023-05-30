@@ -1,0 +1,17 @@
+<%-include ("partials/header.ejs")%>
+<form action="/refinance_debt_service" method="post" class="center">
+	<div class="form-floating mb-3">
+		<input type="text" class="form-control" name="interest_rate" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>interest rate (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="number" class="form-control" name="interest_only" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>interest only (months)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="number" class="form-control" name="NPER" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>NPER (months)</label><br><br>
+	</div>
+	<button type="submit" class="btn btn-primary">continue</button>
+</form>
+<%-include ("partials/footer.ejs")%> 

@@ -57,14 +57,6 @@ function NavBar() {
           <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
             <div className="border-b border-black">
               <div className="flex h-16 items-center">
-                <button
-                    type="button"
-                    className="rounded-md p-2 text-gray-400 lg:hidden"
-                    onClick={() => setOpen(true)}
-                >
-                  <span className="sr-only">Open menu</span>
-                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                </button>
 
                 <div className="ml-4 flex lg:ml-0">
                   <a href="#">
@@ -119,21 +111,21 @@ export default function Home() {
               </radialGradient>
             </defs>
           </svg>
-          <div className="mx-auto max-w-full text-center lg:mx-0 lg:flex-auto lg:py-48 lg:px-80 lg:text-center ">
+          <div className="mx-auto max-w-full text-center lg:mx-0 lg:flex-auto lg:pt-60 lg:text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl"
+                style={{color: "white"}}
+            >
+              appFM
+            </h1>
+          </div>
+          <div className="mx-auto max-w-2xl text-center lg:text-center dark py-32">
             <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl"
                 style={{color: "white"}}
             >
               Cloud Based Financial Modeling
             </h1>
           </div>
-          <div className="mx-auto max-w-2xl text-center lg:text-center dark">
-            <h3 className="text-2xl tracking-tight text-white-900 sm:text-2xl"
-                style={{color: "white"}}
-            >
-              A cloud-based solution providing comprehensive and real-time financial analysis for real estate investments and transactions.
-            </h3>
-          </div>
-          <div className="mx-auto max-w-2xl text-center lg:text-center flex flex-row justify-evenly py-10 dark ">
+          <div className="mx-auto max-w-2xl text-center lg:text-center flex flex-row justify-evenly dark ">
             <div className="firstBtn btn">
               <Link
                   href="https://immense-ocean-60893.herokuapp.com"

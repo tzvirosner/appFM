@@ -1,0 +1,21 @@
+<%-include ("partials/header.ejs")%>
+<form action="/debt" method="post" class="center">
+	<div class="form-floating mb-3">
+		<input type="text"  name="ltv" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>LTV (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="text"  name="interest_rate" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>interest rate (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="text"  name="interest_only" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>interest only (months)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="text"  name="NPER" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+		<label>NPER (months)</label><br><br>
+	</div>
+	<button type="submit" class="btn btn-primary">continue</button>	
+</form>	
+<%-include ("partials/footer.ejs")%> 

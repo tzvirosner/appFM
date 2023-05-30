@@ -1,0 +1,17 @@
+<%-include ("partials/header.ejs")%>
+	<form action="/budget" method="post" class="center">
+		<div class="form-floating mb-3">
+			<input type="text" name="purchase_price" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+			<label>purchase price</label><br><br>
+		</div>
+		<div class="form-floating mb-3">
+			<input type="text"  name="closing_costs" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+			<label>closing costs (%)</label><br><br>
+		</div>
+		<div class="form-floating mb-3">
+			<input type="text" name="construction_costs" class="form-control" <%=x.requ%> onkeypress="<%=x.nc%>">
+			<label>construction costs</label><br><br>
+		</div>
+		<button type="submit" class="btn btn-primary">continue</button>
+	</form>	
+<%-include ("partials/footer.ejs")%>

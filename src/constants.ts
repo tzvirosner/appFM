@@ -1,0 +1,105 @@
+const financials = {
+    requ: "required",
+    nc: "return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))",
+    property_info: {"street address": "", city: "", state: "", zip: "", sf: "", "unit count": 0},
+    hold_time: 0,
+    budget: {
+        purchase_price: ["purchase price", 0],
+        closing_costs: ["closing costs", 0],
+        construction_costs: ["construction costs", 0],
+        total_budget: ["total budget", 0]
+    },
+    closing_costs_ratio: 0,
+    capital_stack: {},
+    num_unit_types: 0,
+    units: [],
+    rir: 0,  // rir = rental inflation rate
+    vi: 0, // vi = vacancy input
+    bdi: 0, // bdi = bad debt input
+    management_fee: 0,
+    oiir: 0, //oiir = other_income_inflation_rate
+    how_many_expenses: 0,
+    expenses: [],
+    pricing_metrics: {
+        "purchase price": 0,
+        "purchase price PSF": 0,
+        "purchase price per unit": 0,
+        "total project cost": 0,
+        "total project cost PSF": 0,
+        "total project cost per unit": 0,
+        "in place NOI": 0,
+        "in place cap rate": 0,
+        "GRM": 0
+    },
+// sdi = senior debt info
+    sdi: {
+        "loan amount": "",
+        "LTV": 0,
+        "LTC": 0,
+        "interest rate": "",
+        "interest only component": 0,
+        "amortized component": 0,
+        "interest only debt service": 0,
+        "amortized debt service": 0,
+        "lowest DSCR": 0,
+        "average DSCR": 0,
+        "dscr": [],
+        "sat": [], // sat = senior amortization table
+    },
+    refinance: {
+        "year of refinance": 0,
+        "forward year NOI": 0,
+        "valuation cap rate": 0,
+        "value of asset": 0,
+        "LTV": 0,
+        "loan amount": 0,
+        "% of proceeds for closing costs": 0,
+        "cost of refinance": 0,
+        "refinance proceeds": 0,
+        "repayment of original loan": 0,
+        "net refinance proceeds": 0,
+        "return of equity": 0,
+        "profit from refinance": 0,
+        "% of equity invested after refinance": 0,
+        "equity invested after refinance": 0,
+        "interest rate": 0,
+        "interest only component": 0,
+        "amortized component": 0,
+        "interest only debt service": 0,
+        "amortized debt service": 0,
+        "lowest DSCR": 0,
+        "average DSCR": 0,
+        "dscr": [],
+        "sat": [], // sat = senior amortization table
+    },
+// CFP = Cash Flow Projection
+    CFP: {
+        "year": ["Y0 / in-place"],
+        "rental income": [],
+        "other income": [],
+        "total income": [],
+        "vacancy": [],
+        "bad debt": [],
+        "net income": []
+    },
+    notes_CFP: [],
+    sale: {
+        "year of sale": 0,
+        "valuation cap rate": 0,
+        "NOI": 0,
+        "value of asset": 0,
+        "% of proceeds for closing costs": 0,
+        "cost of sale": 0,
+        "sale proceeds": 0,
+        "repayment of loan": 0,
+        "net sale proceeds": 0,
+        "return of equity": 0,
+        "profit from sale": 0,
+        "profit from refinance": 0,
+        "profit from cash flow": 0,
+        "total profit": 0,
+        "IRR": 0,
+        "equity multiple": 0,
+        "average cash on cash return": 0,
+    }
+};

@@ -1,0 +1,9 @@
+<%-include ("partials/header.ejs")%>
+	<form action="/how_many_expenses" method="post" class="center">
+		<div class="form-floating mb-3">
+			<input type="number" class="form-control" name="how_many" <%=x.requ%>>
+			<label># of expenses (exc. man. fee)</label><br><br>
+		</div>
+		<button type="submit" class="btn btn-primary">continue</button>
+	</form>	
+<%-include ("partials/footer.ejs")%> 

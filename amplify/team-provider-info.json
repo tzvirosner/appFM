@@ -32,11 +32,16 @@
       "function": {
         "sendEmail": {
           "deploymentBucketName": "amplify-appfm-appfm-123029-deployment",
-          "s3Key": "amplify-builds/sendEmail-6f4f32733734712f4b57-build.zip"
+          "s3Key": "amplify-builds/sendEmail-6d494556466d45465857-build.zip"
+        },
+        "expressServer": {
+          "deploymentBucketName": "amplify-appfm-appfm-123029-deployment",
+          "s3Key": "amplify-builds/expressServer-554b655679454f54464a-build.zip"
         }
       },
       "api": {
-        "callSendEmail2": {}
+        "callSendEmail2": {},
+        "calculator": {}
       }
     }
   }

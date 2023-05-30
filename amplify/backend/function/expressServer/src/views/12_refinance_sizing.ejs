@@ -1,0 +1,25 @@
+<%-include ("partials/header.ejs")%>
+<form method="post" action="/refinance_sizing" class="center">
+	<select class="form-select form-control" name="year" <%=x.requ%>>
+		<option disabled>year of refinance</option>
+		<%var i = 1%>
+		<%while(i<=x.hold_time){%>
+			<option>Y<%=i%></option>
+		<%i++%>
+		<%}%>
+	</select><br><br>
+	<div class="form-floating mb-3">
+		<input type="text" class="form-control" name="cap_rate" onkeypress="<%=x.nc%>" <%=x.requ%>>
+		<label>valuation cap rate (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="text" class="form-control" name="LTV" onkeypress="<%=x.nc%>" <%=x.requ%>>
+		<label>LTV (%)</label><br><br>
+	</div>
+	<div class="form-floating mb-3">
+		<input type="text" class="form-control" name="closing_costs" onkeypress="<%=x.nc%>" <%=x.requ%>>
+		<label>closing costs (%)</label><br><br>
+	</div>
+	<button type="submit" class="btn btn-primary">continue</button>
+</form>
+<%-include ("partials/footer.ejs")%> 

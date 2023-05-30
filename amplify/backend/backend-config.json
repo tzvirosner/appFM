@@ -1,5 +1,19 @@
 {
   "api": {
+    "calculator": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "expressServer"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "callSendEmail2": {
       "dependsOn": [
         {
@@ -42,6 +56,12 @@
     }
   },
   "function": {
+    "expressServer": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "sendEmail": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -49,6 +69,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_expressServer_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "expressServer"
+        }
+      ]
+    },
+    "AMPLIFY_function_expressServer_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "expressServer"
+        }
+      ]
+    },
     "AMPLIFY_function_sendEmail_deploymentBucketName": {
       "usedBy": [
         {

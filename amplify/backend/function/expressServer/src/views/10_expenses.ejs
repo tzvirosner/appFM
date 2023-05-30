@@ -1,0 +1,23 @@
+<%-include ("partials/header.ejs")%>
+<form action="/expenses" method="post" class="center">
+	<%var i = 0%>
+	<%while(i<x.how_many_expenses){%>
+		<div>
+			<div class="form-floating mb-3 partial_width">
+				<input type="text" class="form-control" name="type_<%=i%>" <%=x.requ%>>
+				<label>expense type</label>
+			</div>
+			<div class="form-floating mb-3 partial_width">
+				<input type="text" class="form-control" name="amount_<%=i%>" <%=x.requ%> onkeypress="<%=x.nc%>">
+				<label>amount (anuually)</label>
+			</div>
+			<div class="form-floating mb-3 partial_width">
+				<input type="text" class="form-control" name="inflation_<%=i%>" <%=x.requ%> onkeypress="<%=x.nc%>">
+				<label>inflation (%)</label>
+			</div>
+		</div>
+		<%i++%>
+	<%}%>
+	<div class="full_width"><button type="submit" class="btn btn-primary">continue</button></div>
+</form>	
+<%-include ("partials/footer.ejs")%> 

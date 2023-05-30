@@ -1,0 +1,14 @@
+<%-include ("partials/header.ejs")%>
+<form method="post" action="/is_there_refinance" class="center">
+	<p>Will there be a refinance for this property?</p>
+	<div class="form-check">
+  		<input class="form-check-input" type="radio" name="refinance" value="yes" <%=x.requ%>>
+  		<label class="form-check-label">yes</label>
+	</div>
+	<div class="form-check">
+  		<input class="form-check-input" type="radio" name="refinance" value="no">
+  		<label class="form-check-label">no</label>
+	</div><br>
+	<button type="submit" class="btn btn-primary">continue</button>
+</form>
+<%-include ("partials/footer.ejs")%> 

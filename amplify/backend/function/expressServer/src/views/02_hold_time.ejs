@@ -1,0 +1,9 @@
+<%-include ("partials/header.ejs")%>
+	<form action="/hold_time" method="post" class="center">
+		<div class="form-floating mb-3">
+			<input type="number" class="form-control" name="hold_time"<%=x.requ%>>
+			<label>hold time (years)</label><br><br>
+		</div>
+		<button type="submit" class="btn btn-primary">continue</button>
+	</form>	
+<%-include ("partials/footer.ejs")%> 

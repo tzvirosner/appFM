@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, {useState} from "react";
-import {API} from "aws-amplify";
+import axios, {AxiosResponse} from 'axios';
 
 export default function Page() {
     const [firstName, setFirstName] = useState("")
@@ -12,32 +12,24 @@ export default function Page() {
 
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        console.log(e, "EEVVEMNT")
-        console.log(process.env.ENDPOINT, "EEVVEMNT")
-        console.log(process.env.API_KEY, "EEVVEMNT")
+
         // @ts-ignore
-        const res = await API.post(process.env.ENDPOINT, "", {
+        const res: AxiosResponse = await axios.post(process.env.ENDPOINT, {
+            message: `${firstName} ${lastName} - Email: (${email}) says: ${message}`},
+        {
             headers: {
                 "x-api-key": process.env.API_KEY,
                 "Content-Type": "application/json"
-
-            },
-            body: JSON.stringify({
-                firstName,
-                lastName,
-                email,
-                message
-            })
+            }
         })
-
-        const {status} = await res.json()
-
-        if (status === "success") {
+        const {status} = res;
+        if (status === 200) {
             alert("Message sent.")
             setFirstName("")
             setLastName("")
             setEmail("")
             setMessage("")
+            
         } else {
             alert("Message failed to send.")
         }

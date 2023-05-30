@@ -1,5 +1,20 @@
 {
-  "api": {},
+  "api": {
+    "callSendEmail2": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "sendEmail"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "appfm": {
       "dependsOn": [],

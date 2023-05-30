@@ -28,6 +28,15 @@
     "categories": {
       "auth": {
         "appfm": {}
+      },
+      "function": {
+        "sendEmail": {
+          "deploymentBucketName": "amplify-appfm-appfm-123029-deployment",
+          "s3Key": "amplify-builds/sendEmail-6f4f32733734712f4b57-build.zip"
+        }
+      },
+      "api": {
+        "callSendEmail2": {}
       }
     }
   }

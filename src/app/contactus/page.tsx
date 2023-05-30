@@ -77,7 +77,7 @@ export default function Page() {
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-4">
+                            <div className="col-span-full">
                                 <label htmlFor="email"
                                        className="block text-sm font-medium leading-6 text-black-500">
                                     Email address

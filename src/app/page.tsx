@@ -9,47 +9,6 @@ function NavBar() {
   const [open, setOpen] = useState(false)
   return (
       <div className="dark">
-        <Transition.Root show={open} as={Fragment}>
-          <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
-            <Transition.Child
-                as={Fragment}
-                enter="transition-opacity ease-linear duration-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity ease-linear duration-300"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-            >
-              <div className="fixed inset-0 bg-black bg-opacity-25" />
-            </Transition.Child>
-
-            <div className="fixed inset-0 z-40 flex">
-              <Transition.Child
-                  as={Fragment}
-                  enter="transition ease-in-out duration-300 transform"
-                  enterFrom="-translate-x-full"
-                  enterTo="translate-x-0"
-                  leave="transition ease-in-out duration-300 transform"
-                  leaveFrom="translate-x-0"
-                  leaveTo="-translate-x-full"
-              >
-                <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto dark pb-12 shadow-xl">
-                  <div className="flex px-4 pb-2 pt-5">
-                    <button
-                        type="button"
-                        className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
-                        onClick={() => setOpen(false)}
-                    >
-                      <span className="sr-only">Close menu</span>
-                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
-                  </div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </Dialog>
-        </Transition.Root>
-
         <header className="relative bg-slate-950">
           {/*<p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8 call-to-action-nav">*/}
           {/*  {`BREAKPOINT 2023 - NEW YORK CITY. - GET TICKETS ->`}*/}
@@ -111,14 +70,14 @@ export default function Home() {
               </radialGradient>
             </defs>
           </svg>
-          <div className="mx-auto max-w-full text-center lg:mx-0 lg:flex-auto lg:pt-60 lg:text-center">
+          <div className="mx-auto max-w-full text-center lg:mx-0 lg:flex-auto lg:pt-60 lg:text-center pt-32">
             <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl"
                 style={{color: "white"}}
             >
               appFM
             </h1>
           </div>
-          <div className="mx-auto max-w-2xl text-center lg:text-center dark py-32">
+          <div className="mx-auto max-w-2xl text-center lg:text-center dark lg:py-32 py-16">
             <h1 className="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl"
                 style={{color: "white"}}
             >
